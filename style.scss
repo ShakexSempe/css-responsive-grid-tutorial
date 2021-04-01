@@ -1,0 +1,56 @@
+@import 'config';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    display: grid;
+    height: 100vh;
+    //4 columns that are 1 fr
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    //4 rows of different sizes
+    grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+
+//write layout in text using gt-areas then assign values to elements
+    grid-template-areas: "nav nav nav nav"
+                        "sidebar main main main"
+                        "sidebar content1 content2 content3"
+                        "sidebar footer footer footer";
+    
+
+    .nav{
+        background: $nav-background;
+        grid-area: nav;
+    }
+    .main{
+        background: $main-background;
+        grid-area: main;
+    }
+    #sidebar{
+        background: $side-background;
+        grid-area: sidebar;
+        
+    }
+    #content1{
+        background: $content1-background;
+        grid-area: content1;
+    }
+    #content2{
+        background:$content2-background;
+        grid-area: content2;
+    }
+    #content3{
+        background: $content3-background;
+        grid-area: content3;
+    }
+    .footer{
+        background: $footer-background;
+        grid-area: footer;
+    }
+
+    //GT-area to specify where each element should live in the gird
+
+    
+}
