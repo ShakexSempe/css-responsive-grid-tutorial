@@ -13,12 +13,13 @@
     //4 rows of different sizes
     grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
 
+//GT-area to specify where each element should live in the gird
 //write layout in text using gt-areas then assign values to elements
     grid-template-areas: "nav nav nav nav"
                         "sidebar main main main"
                         "sidebar content1 content2 content3"
                         "sidebar footer footer footer";
-    
+    grid-gap: .2rem;
 
     .nav{
         background: $nav-background;
@@ -50,7 +51,8 @@
         grid-area: footer;
     }
 
-    //GT-area to specify where each element should live in the gird
 
     
 }
+
+@import 'mobile';
